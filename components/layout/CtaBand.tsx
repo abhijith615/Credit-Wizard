@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import MagneticButton from "@/components/ui/MagneticButton";
 import { useReveal } from "@/hooks/useReveal";
 import { site } from "@/lib/site";
@@ -16,6 +17,18 @@ export default function CtaBand({
 
   return (
     <section ref={scope} className="grad-hero relative overflow-hidden py-24 text-white lg:py-32">
+      {/* Background: hands offering funds, graded into brand navy */}
+      <div className="absolute inset-0" aria-hidden="true">
+        <Image
+          src="/images/funding.jpeg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center opacity-25"
+          style={{ filter: "saturate(0.65)" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/85 via-navy-900/75 to-navy-950/90" />
+      </div>
       <div
         className="pointer-events-none absolute -bottom-32 left-1/2 h-80 w-[46rem] -translate-x-1/2 rounded-full opacity-25"
         style={{ background: "radial-gradient(closest-side, rgba(199,154,45,0.7), transparent)" }}

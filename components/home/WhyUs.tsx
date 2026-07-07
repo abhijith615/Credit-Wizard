@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useReveal } from "@/hooks/useReveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 
@@ -55,6 +56,18 @@ export default function WhyUs() {
       className="relative overflow-hidden bg-navy-900 py-28 text-white lg:py-36"
       aria-labelledby="why-heading"
     >
+      {/* Background: Tiruppur textile floor under a deep navy grade */}
+      <div className="absolute inset-0" aria-hidden="true">
+        <Image
+          src="/images/business-loan.jpeg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/90 via-navy-900/80 to-navy-950/95" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-900/70 to-transparent" />
+      </div>
       <div
         className="pointer-events-none absolute -left-40 top-24 h-[34rem] w-[34rem] rounded-full opacity-20"
         style={{ background: "radial-gradient(closest-side, rgba(59,91,169,0.9), transparent)" }}

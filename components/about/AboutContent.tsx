@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef } from "react";
 import { gsap, useGSAP, prefersReducedMotion } from "@/lib/gsap";
 import { useReveal } from "@/hooks/useReveal";
@@ -109,6 +110,39 @@ export default function AboutContent() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Editorial imagery: how we work, and what it adds up to */}
+      <section className="bg-white pb-28" aria-label="CreditWizard in pictures">
+        <div className="mx-auto grid max-w-7xl gap-6 px-5 sm:px-8 lg:grid-cols-[1.35fr_1fr]">
+          <figure data-reveal-x="left" className="group relative overflow-hidden rounded-3xl">
+            <Image
+              src="/images/consultation.jpeg"
+              alt="A couple reviewing home loan options with a CreditWizard advisor"
+              width={2400}
+              height={1792}
+              sizes="(max-width: 1024px) 100vw, 640px"
+              className="h-80 w-full object-cover transition-transform duration-[1.4s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04] sm:h-[26rem]"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-950/55 via-transparent to-transparent" aria-hidden="true" />
+            <figcaption className="absolute bottom-6 left-7 right-7 font-serif-display text-2xl text-white drop-shadow-[0_2px_12px_rgba(13,20,40,0.6)]">
+              Every loan starts with a conversation, not a form.
+            </figcaption>
+          </figure>
+          <figure data-reveal-x="right" className="group relative overflow-hidden rounded-3xl border border-navy-100 bg-white">
+            <Image
+              src="/images/growth.jpeg"
+              alt="Rising growth chart built from Indian rupee notes"
+              width={2400}
+              height={1792}
+              sizes="(max-width: 1024px) 100vw, 480px"
+              className="h-80 w-full object-cover transition-transform duration-[1.4s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04] sm:h-[26rem]"
+            />
+            <figcaption className="absolute bottom-6 left-7 right-7 font-serif-display text-2xl text-navy-800">
+              ₹850+ crore of growth, funded honestly.
+            </figcaption>
+          </figure>
         </div>
       </section>
 

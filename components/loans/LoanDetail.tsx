@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { useReveal } from "@/hooks/useReveal";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -54,8 +55,32 @@ export default function LoanDetail({ loan }: { loan: Loan }) {
 
   return (
     <div ref={scope}>
+      {/* Featured image */}
+      <section className="bg-white pb-16 pt-4" aria-label={`${loan.name} in pictures`}>
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div data-scale className="group relative overflow-hidden rounded-3xl">
+            <Image
+              src={loan.image}
+              alt={loan.imageAlt}
+              width={2400}
+              height={1792}
+              sizes="(max-width: 1280px) 100vw, 1216px"
+              className="h-72 w-full object-cover transition-transform duration-[1.4s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04] sm:h-96 lg:h-[30rem]"
+            />
+            {/* Navy grade for brand cohesion */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-950/45 via-transparent to-transparent" />
+            <p
+              aria-hidden="true"
+              className="absolute bottom-6 left-7 max-w-md font-serif-display text-2xl text-white drop-shadow-[0_2px_12px_rgba(13,20,40,0.6)] sm:text-3xl"
+            >
+              {loan.tagline}
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Overview + features */}
-      <section className="bg-white pb-24 pt-4 lg:pb-32" aria-label={`${loan.name} overview`}>
+      <section className="bg-white pb-24 lg:pb-32" aria-label={`${loan.name} overview`}>
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="grid gap-14 lg:grid-cols-[1.2fr_1fr] lg:gap-20">
             <div>
