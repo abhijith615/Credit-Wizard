@@ -1,0 +1,262 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/*  CreditWizard Design System                                         */
+/*  Navy #243E73 · Gold #C79A2D · Royal #3B5BA9 · Warm neutrals        */
+/* ------------------------------------------------------------------ */
+
+@theme {
+  --color-navy-950: #101c38;
+  --color-navy-900: #16244a;
+  --color-navy-800: #1c2f5c;
+  --color-navy-700: #243e73;
+  --color-navy-600: #2d4d8e;
+  --color-navy-500: #3b5ba9;
+  --color-navy-400: #5d7bc0;
+  --color-navy-300: #8ba3d6;
+  --color-navy-200: #bccbe8;
+  --color-navy-100: #e2e9f6;
+  --color-navy-50: #f2f5fb;
+
+  --color-gold-700: #8f6c1a;
+  --color-gold-600: #a98322;
+  --color-gold-500: #c79a2d;
+  --color-gold-400: #d9b155;
+  --color-gold-300: #e6c988;
+  --color-gold-200: #f1dfba;
+  --color-gold-100: #f9f1de;
+  --color-gold-50: #fdf9f0;
+
+  --color-ink: #1e222b;
+  --color-ink-soft: #4b5265;
+  --color-mist: #f6f5f2;
+  --color-beige: #f4efe6;
+
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-jakarta), "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-luxe: cubic-bezier(0.65, 0.05, 0, 1);
+
+  --animate-marquee: marquee 42s linear infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-float-slow: float 11s ease-in-out infinite;
+  --animate-shimmer: shimmer 2.8s ease-in-out infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+}
+
+html {
+  scroll-behavior: initial; /* Lenis owns scrolling */
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--color-gold-200);
+  color: var(--color-navy-900);
+}
+
+/* Visible focus for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--color-gold-500);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- Typography helpers ---------- */
+
+.font-serif-display {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-gold-600);
+}
+
+/* ---------- Gradients & surfaces ---------- */
+
+.grad-navy {
+  background: linear-gradient(135deg, var(--color-navy-700) 0%, var(--color-navy-500) 100%);
+}
+
+.grad-hero {
+  background:
+    radial-gradient(1200px 600px at 78% -10%, rgba(59, 91, 169, 0.55) 0%, transparent 60%),
+    radial-gradient(900px 500px at 12% 110%, rgba(199, 154, 45, 0.22) 0%, transparent 55%),
+    linear-gradient(168deg, #16244a 0%, #243e73 55%, #1c2f5c 100%);
+}
+
+.text-gold-shimmer {
+  background: linear-gradient(100deg, #c79a2d 20%, #f3dfa4 40%, #c79a2d 60%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: var(--animate-shimmer);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(36, 62, 115, 0.08);
+}
+
+.glass-dark {
+  background: rgba(22, 36, 74, 0.42);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.card-luxe {
+  background: #ffffff;
+  border: 1px solid rgba(36, 62, 115, 0.07);
+  box-shadow:
+    0 1px 2px rgba(22, 36, 74, 0.04),
+    0 12px 40px -18px rgba(22, 36, 74, 0.12);
+  transition:
+    transform 0.6s var(--ease-out-expo),
+    box-shadow 0.6s var(--ease-out-expo),
+    border-color 0.4s ease;
+}
+
+.card-luxe:hover {
+  transform: translateY(-6px);
+  border-color: rgba(199, 154, 45, 0.35);
+  box-shadow:
+    0 1px 2px rgba(22, 36, 74, 0.05),
+    0 30px 60px -22px rgba(22, 36, 74, 0.25),
+    0 0 0 1px rgba(199, 154, 45, 0.12);
+}
+
+/* Gold sheen sweep used on premium cards */
+.sheen {
+  position: relative;
+  overflow: hidden;
+}
+.sheen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(199, 154, 45, 0.10) 50%,
+    transparent 60%
+  );
+  transform: translateX(-120%);
+  transition: transform 1.1s var(--ease-out-expo);
+  pointer-events: none;
+}
+.sheen:hover::after {
+  transform: translateX(120%);
+}
+
+/* ---------- Reveal primitives (animated by GSAP) ---------- */
+
+.reveal-line {
+  display: block;
+  overflow: hidden;
+}
+.reveal-line > span {
+  display: block;
+  will-change: transform;
+}
+
+[data-reveal] {
+  will-change: transform, opacity;
+}
+
+/* ---------- Custom cursor ---------- */
+
+@media (pointer: fine) {
+  .cw-cursor-dot,
+  .cw-cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    border-radius: 9999px;
+    will-change: transform;
+  }
+  .cw-cursor-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--color-gold-500);
+    box-shadow: 0 0 12px rgba(199, 154, 45, 0.65);
+  }
+  .cw-cursor-ring {
+    width: 38px;
+    height: 38px;
+    border: 1.5px solid rgba(199, 154, 45, 0.55);
+    transition: width 0.35s var(--ease-out-expo), height 0.35s var(--ease-out-expo),
+      border-color 0.3s ease, background-color 0.3s ease;
+  }
+  .cw-cursor-ring.is-hover {
+    width: 62px;
+    height: 62px;
+    border-color: rgba(199, 154, 45, 0.9);
+    background: rgba(199, 154, 45, 0.06);
+  }
+}
+
+/* ---------- Reduced motion: kill everything non-essential ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .cw-cursor-dot,
+  .cw-cursor-ring {
+    display: none;
+  }
+}
