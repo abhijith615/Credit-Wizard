@@ -69,7 +69,7 @@ export const loans: Loan[] = [
       "A home loan is a 15–25 year commitment, and a 0.5% rate difference can cost lakhs. We compare offers across leading banks and housing finance companies, negotiate processing fees, and walk you through every step from sanction to registration — so you close on your home with total clarity.",
     icon: "home",
     image: "/images/home-loan.jpeg",
-    imageAlt: "Happy Indian family receiving the keys to their new home",
+    imageAlt: "Model of an Indian house with keys ready for handover",
     highlights: ["New Home Purchase", "Construction", "Balance Transfer"],
     features: [
       { title: "New Home Purchase", description: "Funding up to 90% of property value for ready and under-construction homes." },
@@ -106,7 +106,7 @@ export const loans: Loan[] = [
       "Your property can fund your next big move — business expansion, education, consolidation of high-cost debt or a major purchase. We arrange loans against residential and commercial property at rates far below unsecured borrowing, with tenures up to 15 years and quick, transparent processing.",
     icon: "building",
     image: "/images/property.jpeg",
-    imageAlt: "Model of an Indian house with property keys on a desk",
+    imageAlt: "Couple reviewing a loan against property with an advisor, house model and keys on the desk",
     highlights: ["Residential Property", "Commercial Property", "Quick Processing"],
     features: [
       { title: "Residential Property", description: "Loans up to 70% of market value against self-occupied or rented homes." },
@@ -143,7 +143,7 @@ export const loans: Loan[] = [
       "Weddings, medical needs, travel or that gap between plans and payday — a personal loan bridges it without touching your savings. We match salaried employees and professionals with lenders offering the fastest approvals and lowest rates for their exact profile, often with same-week disbursal.",
     icon: "user",
     image: "/images/personal-loan.jpeg",
-    imageAlt: "Indian family completing personal loan paperwork together at home",
+    imageAlt: "Hands offering a money bag marked with the rupee symbol",
     highlights: ["Salaried Employees", "Professionals", "Fast Approval"],
     features: [
       { title: "Salaried Employees", description: "Pre-approved style offers based on your salary and employer category." },
@@ -179,7 +179,7 @@ export const loans: Loan[] = [
       "In textile and manufacturing businesses, money is always in motion — stock, receivables, advances. Working capital finance keeps operations liquid without eating into margins. We structure cash credit limits, overdrafts and CGTMSE-covered facilities that match your operating cycle, renewing and enhancing them as you grow.",
     icon: "cycle",
     image: "/images/working-capital.jpeg",
-    imageAlt: "Business couple reviewing cash flow with a calculator and budget spreadsheet",
+    imageAlt: "Rising growth chart built from Indian rupee notes",
     highlights: ["Cash Credit (CC)", "Overdraft (OD)", "CGTMSE Loan"],
     features: [
       { title: "Cash Credit (CC)", description: "Revolving limits against stock and receivables — pay interest only on what you use." },

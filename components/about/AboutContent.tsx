@@ -118,8 +118,8 @@ export default function AboutContent() {
         <div className="mx-auto grid max-w-7xl gap-6 px-5 sm:px-8 lg:grid-cols-[1.35fr_1fr]">
           <figure data-reveal-x="left" className="group relative overflow-hidden rounded-3xl">
             <Image
-              src="/images/consultation.jpeg"
-              alt="A couple reviewing home loan options with a CreditWizard advisor"
+              src="/images/family-keys.jpeg"
+              alt="A family celebrating as they receive the keys to their new home"
               width={2400}
               height={1792}
               sizes="(max-width: 1024px) 100vw, 640px"
@@ -127,7 +127,7 @@ export default function AboutContent() {
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-950/55 via-transparent to-transparent" aria-hidden="true" />
             <figcaption className="absolute bottom-6 left-7 right-7 font-serif-display text-2xl text-white drop-shadow-[0_2px_12px_rgba(13,20,40,0.6)]">
-              Every loan starts with a conversation, not a form.
+              Every approval ends in a moment like this.
             </figcaption>
           </figure>
           <figure data-reveal-x="right" className="group relative overflow-hidden rounded-3xl border border-navy-100 bg-white">
