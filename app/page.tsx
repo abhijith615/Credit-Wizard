@@ -3,6 +3,7 @@ import Hero from "@/components/home/Hero";
 import AboutPreview from "@/components/home/AboutPreview";
 import Services from "@/components/home/Services";
 import WhyUs from "@/components/home/WhyUs";
+import EmiSection from "@/components/home/EmiSection";
 import Process from "@/components/home/Process";
 import Testimonials from "@/components/home/Testimonials";
 import EnquiryForm from "@/components/home/EnquiryForm";
@@ -24,6 +25,7 @@ export default function HomePage() {
       <AboutPreview />
       <Services />
       <WhyUs />
+      <EmiSection />
       <Process />
       <Testimonials />
       <EnquiryForm />

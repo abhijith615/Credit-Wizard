@@ -7,6 +7,7 @@ import { useReveal } from "@/hooks/useReveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import LoanIcon from "@/components/ui/LoanIcon";
 import MagneticButton from "@/components/ui/MagneticButton";
+import EmiCalculator from "@/components/calculator/EmiCalculator";
 import type { Loan } from "@/lib/data/loans";
 import { loans } from "@/lib/data/loans";
 
@@ -144,6 +145,24 @@ export default function LoanDetail({ loan }: { loan: Loan }) {
                 </div>
               </div>
             </aside>
+          </div>
+        </div>
+      </section>
+
+      {/* EMI calculator, pre-set for this product */}
+      <section className="bg-white pb-24 lg:pb-32" aria-label={`${loan.name} EMI calculator`}>
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <SectionHeading
+            eyebrow="Run Your Numbers"
+            title={`What would your ${loan.name.toLowerCase()} cost?`}
+            description="Typical figures for this product are pre-filled — adjust them to match your plan."
+          />
+          <div data-scale className="mt-12 max-w-5xl">
+            <EmiCalculator
+              defaultAmount={loan.emiDefaults.amount}
+              defaultRate={loan.emiDefaults.rate}
+              defaultYears={loan.emiDefaults.years}
+            />
           </div>
         </div>
       </section>

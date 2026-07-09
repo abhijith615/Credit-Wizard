@@ -13,6 +13,7 @@ export interface Loan {
   icon: "briefcase" | "home" | "building" | "user" | "cycle";
   image: string;
   imageAlt: string;
+  emiDefaults: { amount: number; rate: number; years: number };
   highlights: string[];
   features: LoanFeature[];
   eligibility: string[];
@@ -33,6 +34,7 @@ export const loans: Loan[] = [
     icon: "briefcase",
     image: "/images/business-loan.jpeg",
     imageAlt: "Business owner standing confidently on the floor of his textile factory in Tiruppur",
+    emiDefaults: { amount: 5000000, rate: 11.5, years: 5 },
     highlights: ["MSME Loans", "Expansion Finance", "Machinery Loans"],
     features: [
       { title: "MSME Loans", description: "Collateral-light funding tailored for micro, small and medium enterprises, including CGTMSE-backed options." },
@@ -70,6 +72,7 @@ export const loans: Loan[] = [
     icon: "home",
     image: "/images/home-loan.jpeg",
     imageAlt: "Model of an Indian house with keys ready for handover",
+    emiDefaults: { amount: 4000000, rate: 8.5, years: 20 },
     highlights: ["New Home Purchase", "Construction", "Balance Transfer"],
     features: [
       { title: "New Home Purchase", description: "Funding up to 90% of property value for ready and under-construction homes." },
@@ -107,6 +110,7 @@ export const loans: Loan[] = [
     icon: "building",
     image: "/images/property.jpeg",
     imageAlt: "Couple reviewing a loan against property with an advisor, house model and keys on the desk",
+    emiDefaults: { amount: 7500000, rate: 9.75, years: 12 },
     highlights: ["Residential Property", "Commercial Property", "Quick Processing"],
     features: [
       { title: "Residential Property", description: "Loans up to 70% of market value against self-occupied or rented homes." },
@@ -144,6 +148,7 @@ export const loans: Loan[] = [
     icon: "user",
     image: "/images/personal-loan.jpeg",
     imageAlt: "Hands offering a money bag marked with the rupee symbol",
+    emiDefaults: { amount: 500000, rate: 12.5, years: 4 },
     highlights: ["Salaried Employees", "Professionals", "Fast Approval"],
     features: [
       { title: "Salaried Employees", description: "Pre-approved style offers based on your salary and employer category." },
@@ -180,6 +185,7 @@ export const loans: Loan[] = [
     icon: "cycle",
     image: "/images/working-capital.jpeg",
     imageAlt: "Rising growth chart built from Indian rupee notes",
+    emiDefaults: { amount: 2500000, rate: 11, years: 3 },
     highlights: ["Cash Credit (CC)", "Overdraft (OD)", "CGTMSE Loan"],
     features: [
       { title: "Cash Credit (CC)", description: "Revolving limits against stock and receivables — pay interest only on what you use." },
