@@ -40,7 +40,7 @@ export default async function OgImage() {
           <span style={{ color: "#C79A2D" }}>Growth Made Possible.</span>
         </div>
         <div style={{ fontSize: 28, marginTop: 48, color: "#BCCBE8" }}>
-          20+ Years of Trusted Financial Advisory · Tiruppur, Tamil Nadu
+          20+ Years of Trusted Financial Advisory · Serving Clients Across India
         </div>
       </div>
     ),

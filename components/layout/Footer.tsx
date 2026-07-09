@@ -10,6 +10,7 @@ const quickLinks = [
   { href: "/about", label: "About Us" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
+  { href: "/privacy-policy", label: "Privacy & Security Policy" },
 ];
 
 const loanLinks = [
@@ -45,8 +46,8 @@ export default function Footer() {
           <div>
             <Logo light />
             <p className="mt-6 max-w-xs text-sm leading-relaxed text-navy-200">
-              Trusted financial advisory in Tiruppur since {site.founded}. The right loan,
-              the right bank, the right rate — every time.
+              Trusted financial advisory since {site.founded}, serving businesses and
+              families across India. The right loan, the right bank, the right rate — every time.
             </p>
           </div>
 

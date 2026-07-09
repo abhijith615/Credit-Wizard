@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${site.url}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${site.url}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${site.url}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${site.url}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
   ];
 
   const loanPages: MetadataRoute.Sitemap = loans.map((l) => ({

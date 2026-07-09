@@ -6,9 +6,9 @@ import JsonLd from "@/components/seo/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "About Us — Two Decades of Financial Expertise in Tiruppur",
+  title: "About Us — Two Decades of Financial Expertise",
   description:
-    "CreditWizard has guided Tiruppur's businesses and families since 2006 — 5,000+ clients, 35+ banking partners and ₹850+ crore in loans facilitated with a transparent, advisory-first approach.",
+    "CreditWizard has guided businesses and families across India since 2006 — 5,000+ clients, 35+ banking partners and 15+ loan options with a transparent, advisory-first approach.",
   alternates: { canonical: "/about" },
 };
 

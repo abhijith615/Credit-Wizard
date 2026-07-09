@@ -11,11 +11,11 @@ import { breadcrumbSchema, faqSchema, loanServiceSchema } from "@/lib/schema";
 export function loanMetadata(slug: string): Metadata {
   const loan = getLoan(slug)!;
   return {
-    title: `${loan.name} in Tiruppur — Fast Approval, Best Rates`,
-    description: `${loan.description} Free consultation with CreditWizard, Tiruppur's trusted loan advisory since 2006.`,
+    title: `${loan.name} — Fast Approval, Best Rates`,
+    description: `${loan.description} Free consultation with CreditWizard, a trusted loan advisory since 2006.`,
     alternates: { canonical: `/${slug}` },
     openGraph: {
-      title: `${loan.name} — CreditWizard Tiruppur`,
+      title: `${loan.name} — CreditWizard`,
       description: loan.description,
     },
   };

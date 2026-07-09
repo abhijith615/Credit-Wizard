@@ -28,15 +28,16 @@ export const loans: Loan[] = [
     shortName: "Business",
     tagline: "Capital that keeps pace with your ambition.",
     description:
-      "MSME loans, expansion finance and machinery loans designed for Tiruppur's entrepreneurs — with fast approvals through our multi-bank network.",
+      "Collateral-free loans, MSME finance, expansion funding and machinery loans for growing businesses — with fast approvals through our multi-bank network.",
     longDescription:
       "Whether you are scaling a garment unit, adding machinery or entering new markets, our business loan advisory matches you with the right lender, the right structure and the best possible rate. With two decades of banking relationships across 35+ institutions, we negotiate on your behalf and manage the paperwork end to end.",
     icon: "briefcase",
     image: "/images/business-loan.jpeg",
     imageAlt: "Business owner standing confidently on the floor of his textile factory in Tiruppur",
     emiDefaults: { amount: 5000000, rate: 11.5, years: 5 },
-    highlights: ["MSME Loans", "Expansion Finance", "Machinery Loans"],
+    highlights: ["Collateral-Free (Unsecured)", "MSME Loans", "Expansion Finance", "Machinery Loans"],
     features: [
+      { title: "Collateral Free Business Loans (Unsecured)", description: "Funding from ₹10 lakh up to ₹2 crore approved purely on your cash flows, banking conduct and credit history — no property, machinery or deposits pledged. Disbursal in as little as 3–5 working days, ideal for urgent orders, seasonal stock or bridging receivables where speed matters more than rate." },
       { title: "MSME Loans", description: "Collateral-light funding tailored for micro, small and medium enterprises, including CGTMSE-backed options." },
       { title: "Expansion Finance", description: "Structured term loans to fund new units, additional capacity or market expansion." },
       { title: "Machinery Loans", description: "Finance up to 90% of machinery value with tenures aligned to your equipment's earning life." },
@@ -73,8 +74,9 @@ export const loans: Loan[] = [
     image: "/images/home-loan.jpeg",
     imageAlt: "Model of an Indian house with keys ready for handover",
     emiDefaults: { amount: 4000000, rate: 8.5, years: 20 },
-    highlights: ["New Home Purchase", "Construction", "Balance Transfer"],
+    highlights: ["Plot Purchase", "New Home Purchase", "Construction", "Balance Transfer"],
     features: [
+      { title: "Residential Plot Purchase", description: "Plot loans for buying residential land in approved layouts — funding up to 75% of the plot value with tenures up to 15 years. Convert to a composite plot-plus-construction loan when you are ready to build and unlock home-loan interest rates on the full amount." },
       { title: "New Home Purchase", description: "Funding up to 90% of property value for ready and under-construction homes." },
       { title: "Construction Finance", description: "Stage-wise disbursals matched to your build schedule on your own plot." },
       { title: "Balance Transfer", description: "Move an existing loan to a lower rate and unlock top-up funds with minimal paperwork." },

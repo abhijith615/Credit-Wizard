@@ -25,19 +25,20 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Trusted Loan & Financial Advisory in Tiruppur | ${site.tagline}`,
+    default: `${site.name} — Trusted Loan & Financial Advisory | ${site.tagline}`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
   keywords: [
-    "loan consultant Tiruppur",
-    "business loan Tiruppur",
-    "home loan Tamil Nadu",
+    "loan consultant India",
+    "business loan",
+    "home loan",
     "loan against property",
     "working capital loan",
     "CGTMSE loan",
     "MSME finance",
-    "financial advisor Tiruppur",
+    "financial advisor",
+    "loan consultant Tiruppur",
   ],
   alternates: { canonical: "/" },
   openGraph: {

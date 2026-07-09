@@ -36,8 +36,8 @@ const milestones = [
   },
   {
     year: "Today",
-    title: "₹850+ crore and counting",
-    text: "5,000+ clients, 35+ banking partners, and the same founding promise: advice first, always.",
+    title: "Every loan need, one desk",
+    text: "5,000+ clients, 35+ banking partners, 15+ loan options — and the same founding promise: advice first, always.",
   },
 ];
 
@@ -100,11 +100,11 @@ export default function AboutContent() {
               { value: site.stats.years, suffix: "+", label: "Years of Experience" },
               { value: site.stats.clients, suffix: "+", label: "Happy Customers" },
               { value: site.stats.banks, suffix: "+", label: "Banking Partners" },
-              { value: site.stats.croresFacilitated, prefix: "₹", suffix: " Cr+", label: "Loan Value Facilitated" },
+              { value: site.stats.loanOptions, suffix: "+", label: "Loan Options Available" },
             ].map((s) => (
               <div key={s.label} data-reveal className="bg-white p-10 text-center">
                 <p className="font-serif-display text-5xl text-navy-700">
-                  <AnimatedCounter value={s.value} prefix={s.prefix} suffix={s.suffix} />
+                  <AnimatedCounter value={s.value} suffix={s.suffix} />
                 </p>
                 <p className="mt-3 text-sm font-medium text-ink-soft">{s.label}</p>
               </div>
@@ -140,7 +140,7 @@ export default function AboutContent() {
               className="h-80 w-full object-cover transition-transform duration-[1.4s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04] sm:h-[26rem]"
             />
             <figcaption className="absolute bottom-6 left-7 right-7 font-serif-display text-2xl text-navy-800">
-              ₹850+ crore of growth, funded honestly.
+              Every kind of growth, funded honestly.
             </figcaption>
           </figure>
         </div>

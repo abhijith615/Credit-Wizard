@@ -12,7 +12,7 @@ const TICKER_ITEMS = [
   "20+ Years of Expertise",
   "5,000+ Happy Clients",
   "35+ Banking Partners",
-  "₹850+ Crore Facilitated",
+  "15+ Loan Options",
   "CGTMSE Specialists",
   "Free Consultation",
   "Trusted Since 2006",
@@ -262,7 +262,7 @@ export default function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold-400 opacity-60" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-gold-400" />
             </span>
-            Trusted in Tiruppur since 2006
+            Trusted financial advisory since 2006
           </p>
 
           <div className="relative overflow-hidden">
@@ -309,9 +309,9 @@ export default function Hero() {
         <div className="pointer-events-none absolute right-8 top-[24%] hidden xl:block" aria-hidden="true">
           <div data-glass-card data-depth="20" className="glass-dark animate-float w-60 rounded-2xl p-5">
             <p className="text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-gold-300">
-              Loan Facilitated
+              Loan Options
             </p>
-            <p className="font-serif-display mt-2 text-3xl text-white">₹850+ Cr</p>
+            <p className="font-serif-display mt-2 text-3xl text-white">15+</p>
             <div className="mt-3 flex h-8 items-end gap-1">
               {[35, 50, 42, 62, 58, 78, 70, 92].map((hh, i) => (
                 <span

@@ -219,7 +219,7 @@ export default function EnquiryForm() {
                 {field("name", "Full Name", { placeholder: "Your name", autoComplete: "name" })}
                 {field("phone", "Phone", { placeholder: "10-digit mobile", type: "tel", autoComplete: "tel", inputMode: "numeric" })}
                 {field("email", "Email", { placeholder: "you@example.com", type: "email", autoComplete: "email" })}
-                {field("city", "City", { placeholder: "Tiruppur", autoComplete: "address-level2" })}
+                {field("city", "City", { placeholder: "Your city", autoComplete: "address-level2" })}
                 {selectField("loanType", "Loan Type", loans.map((l) => l.name), "Select loan type")}
                 {selectField(
                   "amount",
@@ -268,7 +268,12 @@ export default function EnquiryForm() {
                 )}
               </button>
               <p className="mt-4 text-center text-xs text-ink-soft">
-                By submitting, you agree to be contacted by CreditWizard about your enquiry.
+                By submitting, you agree to be contacted by CreditWizard about your enquiry, as
+                described in our{" "}
+                <a href="/privacy-policy" className="font-medium text-gold-600 underline-offset-2 hover:underline">
+                  Privacy &amp; Security Policy
+                </a>
+                .
               </p>
             </form>
           )}

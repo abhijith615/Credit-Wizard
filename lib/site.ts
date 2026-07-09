@@ -4,7 +4,7 @@ export const site = {
   tagline: "For Your Financial Needs",
   url: "https://www.creditwizard.in",
   description:
-    "CreditWizard is a trusted financial advisory firm in Tiruppur, Tamil Nadu with 20+ years of experience helping businesses and families secure business loans, home loans, loans against property, personal loans and working capital finance.",
+    "CreditWizard is a trusted financial advisory firm with 20+ years of experience helping businesses and families across India secure business loans, home loans, loans against property, personal loans and working capital finance.",
   phone: "+91 98430 00000",
   phoneHref: "tel:+919843000000",
   whatsapp: "https://wa.me/919843000000",
@@ -29,6 +29,6 @@ export const site = {
     years: 20,
     clients: 5000,
     banks: 35,
-    croresFacilitated: 850,
+    loanOptions: 15,
   },
 };

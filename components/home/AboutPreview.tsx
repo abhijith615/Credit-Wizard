@@ -10,7 +10,7 @@ const stats = [
   { value: site.stats.years, suffix: "+", label: "Years of Experience" },
   { value: site.stats.clients, suffix: "+", label: "Happy Customers" },
   { value: site.stats.banks, suffix: "+", label: "Banking Partners" },
-  { value: site.stats.croresFacilitated, prefix: "₹", suffix: " Cr+", label: "Loans Facilitated" },
+  { value: site.stats.loanOptions, suffix: "+", label: "Loan Options Available" },
 ];
 
 export default function AboutPreview() {
@@ -24,7 +24,7 @@ export default function AboutPreview() {
             <SectionHeading
               eyebrow="About CreditWizard"
               title="Two decades of financial expertise, one promise: the right loan, honestly."
-              description="Since 2006, CreditWizard has guided Tiruppur's businesses and families through every kind of financial decision — from a first home to a factory expansion. We are advisors first, brokers second."
+              description="Since 2006, CreditWizard has guided businesses and families across India through every kind of financial decision — from a first home to a factory expansion. We are advisors first, brokers second."
             />
             <div data-reveal className="mt-10">
               <MagneticButton href="/about" variant="navy">
@@ -40,7 +40,7 @@ export default function AboutPreview() {
               {stats.map((s) => (
                 <div key={s.label} className="bg-white p-8 sm:p-10">
                   <p className="font-serif-display text-4xl text-navy-700 sm:text-5xl">
-                    <AnimatedCounter value={s.value} prefix={s.prefix} suffix={s.suffix} />
+                    <AnimatedCounter value={s.value} suffix={s.suffix} />
                   </p>
                   <p className="mt-2 text-sm font-medium text-ink-soft">{s.label}</p>
                 </div>

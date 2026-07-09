@@ -39,13 +39,9 @@ export const financialServiceSchema = () => ({
   areaServed: [
     { "@type": "City", name: "Tiruppur" },
     { "@type": "State", name: "Tamil Nadu" },
+    { "@type": "Country", name: "India" },
   ],
   sameAs: Object.values(site.social),
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "312",
-  },
 });
 
 export const breadcrumbSchema = (items: { name: string; path: string }[]) => ({
