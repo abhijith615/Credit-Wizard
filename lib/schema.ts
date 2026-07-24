@@ -94,7 +94,7 @@ export const blogSchema = () => ({
   "@type": "Blog",
   name: `${site.name} — Financial Insights`,
   description:
-    "Expert guidance on business loans, home loans, MSME finance, working capital and credit health from CreditWizard's advisory team.",
+    "Expert guidance on business loans, home loans, MSME finance, working capital and credit health from Credit Wizard In's advisory team.",
   url: `${site.url}/blog`,
   publisher: { "@id": `${site.url}/#organization` },
 });

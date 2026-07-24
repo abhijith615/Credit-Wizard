@@ -30,9 +30,10 @@ export default async function OgImage() {
         <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={logoSrc} width={84} height={84} style={{ borderRadius: 18 }} alt="" />
-          <div style={{ fontSize: 44, display: "flex" }}>
-            Credit<span style={{ color: "#C79A2D" }}>Wizard</span>
-            <span style={{ color: "#8BA3D6", marginLeft: 10 }}>In</span>
+          <div style={{ fontSize: 44, display: "flex", gap: 12 }}>
+            <span>Credit</span>
+            <span style={{ color: "#C79A2D" }}>Wizard</span>
+            <span style={{ color: "#8BA3D6" }}>In</span>
           </div>
         </div>
         <div style={{ fontSize: 72, marginTop: 60, lineHeight: 1.15, display: "flex", flexDirection: "column" }}>

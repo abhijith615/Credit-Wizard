@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 /**
- * CreditWizard brand: the hexagonal "CW" mark cropped from the
+ * Credit Wizard In brand: the hexagonal "CW" mark cropped from the
  * original logo.png (navy tile, gold/white monogram) paired with a
  * crisp HTML wordmark so the text stays sharp at every size.
  */
@@ -27,7 +27,7 @@ export default function Logo({ light = false }: { light?: boolean }) {
             light ? "text-white" : "text-navy-800"
           }`}
         >
-          Credit<span className="text-gold-500">Wizard</span>
+          Credit <span className="text-gold-500">Wizard</span>
           <span className={light ? "text-navy-200" : "text-ink-soft"}> In</span>
         </span>
         <span

@@ -8,7 +8,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "About Us — Two Decades of Financial Expertise",
   description:
-    "CreditWizard has guided businesses and families across India since 2006 — 5,000+ clients, 35+ banking partners and 15+ loan options with a transparent, advisory-first approach.",
+    "Credit Wizard In has guided businesses and families across India since 2006 — 5,000+ clients, 35+ banking partners and 15+ loan options with a transparent, advisory-first approach.",
   alternates: { canonical: "/about" },
 };
 
@@ -22,7 +22,7 @@ export default function AboutPage() {
         ])}
       />
       <PageHeader
-        eyebrow="About CreditWizard"
+        eyebrow="About Credit Wizard In"
         title="Two Decades of Financial Expertise"
         description="We started in 2006 with a simple belief: people deserve a financial advisor who sits on their side of the table. Twenty years and thousands of clients later, nothing about that has changed."
         crumbs={[

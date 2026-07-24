@@ -12,10 +12,10 @@ export function loanMetadata(slug: string): Metadata {
   const loan = getLoan(slug)!;
   return {
     title: `${loan.name} — Fast Approval, Best Rates`,
-    description: `${loan.description} Free consultation with CreditWizard, a trusted loan advisory since 2006.`,
+    description: `${loan.description} Free consultation with Credit Wizard In, a trusted loan advisory since 2006.`,
     alternates: { canonical: `/${slug}` },
     openGraph: {
-      title: `${loan.name} — CreditWizard`,
+      title: `${loan.name} — Credit Wizard In`,
       description: loan.description,
     },
   };

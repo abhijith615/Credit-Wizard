@@ -11,7 +11,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "CreditWizard — Trusted Loan & Financial Advisory | For Your Financial Needs",
+  title: "Credit Wizard In — Trusted Loan & Financial Advisory | For Your Financial Needs",
   description:
     "20+ years of trusted financial advisory serving clients across India. Business loans, home loans, loan against property, personal loans and working capital — compared across 35+ banks for the best rates.",
   alternates: { canonical: "/" },

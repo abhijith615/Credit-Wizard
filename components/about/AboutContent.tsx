@@ -12,7 +12,7 @@ const milestones = [
   {
     year: "2006",
     title: "The first desk",
-    text: "CreditWizard opens in Tiruppur with one advisor, two bank relationships and a promise of straight answers.",
+    text: "Credit Wizard In opens in Tiruppur with one advisor, two bank relationships and a promise of straight answers.",
   },
   {
     year: "2011",
@@ -90,7 +90,7 @@ export default function AboutContent() {
   return (
     <div ref={scope as React.RefObject<HTMLDivElement>}>
       {/* Numbers */}
-      <section className="bg-white pb-24 lg:pb-28" aria-label="CreditWizard by the numbers">
+      <section className="bg-white pb-24 lg:pb-28" aria-label="Credit Wizard In by the numbers">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div
             data-reveal-group
@@ -114,7 +114,7 @@ export default function AboutContent() {
       </section>
 
       {/* Editorial imagery: how we work, and what it adds up to */}
-      <section className="bg-white pb-28" aria-label="CreditWizard in pictures">
+      <section className="bg-white pb-28" aria-label="Credit Wizard In in pictures">
         <div className="mx-auto grid max-w-7xl gap-6 px-5 sm:px-8 lg:grid-cols-[1.35fr_1fr]">
           <figure data-reveal-x="left" className="group relative overflow-hidden rounded-3xl">
             <Image

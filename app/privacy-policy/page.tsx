@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Privacy & Security Policy",
   description:
-    "How CreditWizard collects, uses, protects and shares your personal and financial information, in accordance with the Digital Personal Data Protection Act, 2023 and the Information Technology Act, 2000.",
+    "How Credit Wizard In collects, uses, protects and shares your personal and financial information, in accordance with the Digital Personal Data Protection Act, 2023 and the Information Technology Act, 2000.",
   alternates: { canonical: "/privacy-policy" },
   robots: { index: true, follow: true },
 };
@@ -21,7 +21,7 @@ const sections: Section[] = [
   {
     title: "1. Who we are",
     body: [
-      `CreditWizard ("we", "us", "our") is a loan and financial advisory service with its registered office at ${site.address.street}, ${site.address.locality}, ${site.address.region} ${site.address.postalCode}, India. This Privacy & Security Policy explains how we collect, use, store, share and protect your personal information when you use our website, submit an enquiry, or engage our advisory services.`,
+      `Credit Wizard In ("we", "us", "our") is a loan and financial advisory service with its registered office at ${site.address.street}, ${site.address.locality}, ${site.address.region} ${site.address.postalCode}, India. This Privacy & Security Policy explains how we collect, use, store, share and protect your personal information when you use our website, submit an enquiry, or engage our advisory services.`,
       "This policy is published in accordance with the Digital Personal Data Protection Act, 2023 (\"DPDP Act\"), the Information Technology Act, 2000, and the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011 (\"SPDI Rules\").",
     ],
   },
@@ -59,7 +59,7 @@ const sections: Section[] = [
   {
     title: "4. Consent and your rights",
     body: [
-      "By submitting your details on this website, you consent to being contacted by CreditWizard about your enquiry. Under the DPDP Act, 2023, you have the right to:",
+      "By submitting your details on this website, you consent to being contacted by Credit Wizard In about your enquiry. Under the DPDP Act, 2023, you have the right to:",
       {
         list: [
           "Access a summary of the personal data we hold about you and how it has been processed.",
@@ -127,7 +127,7 @@ const sections: Section[] = [
       "In accordance with the Information Technology Act, 2000, the SPDI Rules, 2011 and the DPDP Act, 2023, the contact details of our Grievance Officer are:",
       {
         list: [
-          "Name: Grievance Officer — CreditWizard",
+          "Name: Grievance Officer — Credit Wizard In",
           `Address: ${site.address.street}, ${site.address.locality}, ${site.address.region} ${site.address.postalCode}, India`,
           `Email: ${site.email}`,
           `Phone: ${site.phone} (${site.hours})`,

@@ -268,7 +268,7 @@ export default function EnquiryForm() {
                 )}
               </button>
               <p className="mt-4 text-center text-xs text-ink-soft">
-                By submitting, you agree to be contacted by CreditWizard about your enquiry, as
+                By submitting, you agree to be contacted by Credit Wizard In about your enquiry, as
                 described in our{" "}
                 <a href="/privacy-policy" className="font-medium text-gold-600 underline-offset-2 hover:underline">
                   Privacy &amp; Security Policy

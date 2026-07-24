@@ -8,7 +8,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Contact Us — Free Loan Consultation in Tiruppur",
   description:
-    "Visit CreditWizard on Avinashi Road, Tiruppur, call us, or request a callback. Free consultation on business loans, home loans, LAP, personal loans and working capital.",
+    "Visit Credit Wizard In in Tiruppur, call us, or request a callback. Free consultation on business loans, home loans, LAP, personal loans and working capital.",
   alternates: { canonical: "/contact" },
 };
 

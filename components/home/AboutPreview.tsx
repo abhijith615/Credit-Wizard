@@ -22,9 +22,9 @@ export default function AboutPreview() {
         <div className="grid items-start gap-16 lg:grid-cols-2">
           <div>
             <SectionHeading
-              eyebrow="About CreditWizard"
+              eyebrow="About Credit Wizard In"
               title="Two decades of financial expertise, one promise: the right loan, honestly."
-              description="Since 2006, CreditWizard has guided businesses and families across India through every kind of financial decision — from a first home to a factory expansion. We are advisors first, brokers second."
+              description="Since 2006, Credit Wizard In has guided businesses and families across India through every kind of financial decision — from a first home to a factory expansion. We are advisors first, brokers second."
             />
             <div data-reveal className="mt-10">
               <MagneticButton href="/about" variant="navy">

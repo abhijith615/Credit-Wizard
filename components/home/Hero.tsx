@@ -199,7 +199,7 @@ export default function Hero() {
     <section
       ref={root}
       className="grad-hero relative flex min-h-svh items-center overflow-hidden"
-      aria-label="CreditWizard introduction"
+      aria-label="Credit Wizard In introduction"
     >
       {/* ---------- Layer 0 · brand film ---------- */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">

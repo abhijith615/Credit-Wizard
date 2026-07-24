@@ -81,7 +81,7 @@ export default function WhyUs() {
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
-          eyebrow="Why CreditWizard"
+          eyebrow="Why Credit Wizard In"
           title="What twenty years in the room with bankers buys you."
           description="Anyone can forward your documents to a bank. The difference is knowing which bank, which product, and which way to present your strengths."
           dark

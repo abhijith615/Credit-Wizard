@@ -13,7 +13,7 @@ export const testimonials: Testimonial[] = [
     role: "Garment Exporter",
     location: "Tiruppur",
     quote:
-      "Our CC limit had not been reviewed in four years while turnover doubled. CreditWizard restructured everything across two banks and our interest cost dropped visibly within a quarter. Two decades of relationships clearly count.",
+      "Our CC limit had not been reviewed in four years while turnover doubled. Credit Wizard restructured everything across two banks and our interest cost dropped visibly within a quarter. Two decades of relationships clearly count.",
     rating: 5,
     initials: "SK",
   },
@@ -31,7 +31,7 @@ export const testimonials: Testimonial[] = [
     role: "Textile Machinery Dealer",
     location: "Tiruppur",
     quote:
-      "A machinery loan that two banks had kept pending for months was sanctioned in twelve days once CreditWizard took over the file. They knew exactly which lender's policy fit our balance sheet.",
+      "A machinery loan that two banks had kept pending for months was sanctioned in twelve days once Credit Wizard took over the file. They knew exactly which lender's policy fit our balance sheet.",
     rating: 5,
     initials: "MF",
   },
@@ -58,7 +58,7 @@ export const testimonials: Testimonial[] = [
     role: "Boutique Owner",
     location: "Tiruppur",
     quote:
-      "As a first-generation entrepreneur, banks would not look at my file. CreditWizard structured it under CGTMSE and I had working capital in three weeks. They treat small businesses with the same seriousness as big ones.",
+      "As a first-generation entrepreneur, banks would not look at my file. Credit Wizard structured it under CGTMSE and I had working capital in three weeks. They treat small businesses with the same seriousness as big ones.",
     rating: 5,
     initials: "KS",
   },

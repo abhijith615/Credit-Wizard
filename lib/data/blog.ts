@@ -28,7 +28,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "A 50-point improvement in your CIBIL score can cut your interest rate meaningfully. Here is the exact playbook we give our clients before they apply.",
     category: "Credit Score",
-    author: "CreditWizard Advisory Team",
+    author: "Credit Wizard Advisory Team",
     date: "2026-06-18",
     readingTime: 6,
     accent: "gold",
@@ -39,7 +39,7 @@ export const blogPosts: BlogPost[] = [
       "Third, do not close your oldest credit card. Length of credit history matters, and closing an old account shortens your average account age.",
       "Fourth, avoid new credit inquiries in the 90 days before a major loan application. Every hard inquiry shaves a few points, and clusters of inquiries signal credit hunger to underwriters.",
       "Fifth, if you have a thin file, a small secured card or an FD-backed card builds history safely. Sixth, set every EMI and card bill on auto-debit — a single 30-day late payment can cost 60–100 points and stays on your report for years.",
-      "Finally, keep a healthy mix of secured and unsecured credit. When you are ready, a CreditWizard advisor can pre-screen your profile across 35+ lenders without triggering a hard inquiry.",
+      "Finally, keep a healthy mix of secured and unsecured credit. When you are ready, a Credit Wizard advisor can pre-screen your profile across 35+ lenders without triggering a hard inquiry.",
     ],
   },
   {
@@ -48,7 +48,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Collateral-free credit up to ₹5 crore is available to eligible MSMEs under CGTMSE. Here's how the scheme works and how to qualify.",
     category: "MSME Finance",
-    author: "CreditWizard Advisory Team",
+    author: "Credit Wizard Advisory Team",
     date: "2026-05-30",
     readingTime: 8,
     accent: "navy",
@@ -58,7 +58,7 @@ export const blogPosts: BlogPost[] = [
       "Eligibility hinges on being a new or existing micro/small enterprise with a viable business model. Retail trade, educational institutions and self-help groups have specific carve-outs, so classification matters — get it verified before applying.",
       "The guarantee fee is borne by the borrower and varies by loan size and category, with concessions for women entrepreneurs and units in specified regions.",
       "Banks still underwrite the business: expect scrutiny of GST returns, bank statements and financials. A well-prepared file with clean documentation is what separates a 3-week approval from a 3-month one.",
-      "CreditWizard has processed CGTMSE files across public and private sector banks for over a decade. We match your profile to the lender with the most favourable internal policy for your industry — talk to us before you apply anywhere.",
+      "Credit Wizard has processed CGTMSE files across public and private sector banks for over a decade. We match your profile to the lender with the most favourable internal policy for your industry — talk to us before you apply anywhere.",
     ],
   },
   {
@@ -67,7 +67,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "A lower rate isn't automatically a better deal. Use this break-even framework to decide whether transferring your home loan makes sense.",
     category: "Home Loans",
-    author: "CreditWizard Advisory Team",
+    author: "Credit Wizard Advisory Team",
     date: "2026-05-12",
     readingTime: 5,
     accent: "royal",
@@ -86,7 +86,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "From under-utilised CC limits to funding machinery with short-term money — the cash flow errors we see most often in Tiruppur's textile belt.",
     category: "Working Capital",
-    author: "CreditWizard Advisory Team",
+    author: "Credit Wizard Advisory Team",
     date: "2026-04-22",
     readingTime: 7,
     accent: "navy",
@@ -106,7 +106,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Lower rate and longer tenure, or faster processing and no collateral? A practical comparison for business owners weighing both options.",
     category: "Loan Against Property",
-    author: "CreditWizard Advisory Team",
+    author: "Credit Wizard Advisory Team",
     date: "2026-03-28",
     readingTime: 6,
     accent: "gold",
@@ -125,7 +125,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "Section 24(b), 80C, and the choices the new tax regime forces — how to actually maximise the tax value of your home loan.",
     category: "Tax Saving",
-    author: "CreditWizard Advisory Team",
+    author: "Credit Wizard Advisory Team",
     date: "2026-03-10",
     readingTime: 6,
     accent: "royal",

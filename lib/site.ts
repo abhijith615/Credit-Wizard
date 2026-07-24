@@ -1,10 +1,10 @@
 /** Single source of truth for brand, contact and SEO details. */
 export const site = {
-  name: "CreditWizard",
+  name: "Credit Wizard In",
   tagline: "For Your Financial Needs",
   url: "https://www.creditwizard.in",
   description:
-    "CreditWizard is a trusted financial advisory firm with 20+ years of experience helping businesses and families across India secure business loans, home loans, loans against property, personal loans and working capital finance.",
+    "Credit Wizard In is a trusted financial advisory firm with 20+ years of experience helping businesses and families across India secure business loans, home loans, loans against property, personal loans and working capital finance.",
   phone: "+91 79042 83184",
   phoneHref: "tel:+917904283184",
   whatsapp: "https://wa.me/917904283184",

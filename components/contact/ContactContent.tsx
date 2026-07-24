@@ -41,7 +41,7 @@ const channels = [
     label: "Office",
     value: `${site.address.street}, ${site.address.locality}`,
     href: `https://maps.google.com/?q=${encodeURIComponent(
-      `CreditWizard, ${site.address.street}, ${site.address.locality}, ${site.address.region} ${site.address.postalCode}`
+      `Credit Wizard In, ${site.address.street}, ${site.address.locality}, ${site.address.region} ${site.address.postalCode}`
     )}`,
     note: site.hours,
     icon: (
@@ -87,7 +87,7 @@ export default function ContactContent() {
         <div className="mt-12 grid gap-6 lg:grid-cols-[1.6fr_1fr]" data-reveal-group>
           <div data-reveal className="card-luxe overflow-hidden rounded-3xl">
             <iframe
-              title="CreditWizard office location on Google Maps"
+              title="Credit Wizard In office location on Google Maps"
               src={`https://maps.google.com/maps?q=${encodeURIComponent(
                 `${site.address.street}, ${site.address.locality}, ${site.address.region}`
               )}&z=15&output=embed`}

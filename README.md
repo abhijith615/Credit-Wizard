@@ -1,6 +1,6 @@
-# CreditWizard — For Your Financial Needs
+# Credit Wizard In — For Your Financial Needs
 
-Premium corporate website for CreditWizard, a financial advisory firm in Tiruppur, Tamil Nadu
+Premium corporate website for Credit Wizard In, a financial advisory firm in Tiruppur, Tamil Nadu
 with 20+ years of experience. Built to feel closer to Stripe/Linear/Mercury than a
 traditional loan website.
 
