@@ -5,12 +5,12 @@ export const site = {
   url: "https://www.creditwizard.in",
   description:
     "CreditWizard is a trusted financial advisory firm with 20+ years of experience helping businesses and families across India secure business loans, home loans, loans against property, personal loans and working capital finance.",
-  phone: "+91 98430 00000",
-  phoneHref: "tel:+919843000000",
-  whatsapp: "https://wa.me/919843000000",
-  email: "hello@creditwizard.in",
+  phone: "+91 79042 83184",
+  phoneHref: "tel:+917904283184",
+  whatsapp: "https://wa.me/917904283184",
+  email: "support@creditwizardin.com",
   address: {
-    street: "1st Floor, Avinashi Road",
+    street: "No. 15, Alagendra Towers, 3rd Floor, IDFC Bank Upstairs, Bungalow Stop",
     locality: "Tiruppur",
     region: "Tamil Nadu",
     postalCode: "641603",

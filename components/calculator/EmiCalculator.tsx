@@ -35,68 +35,109 @@ const fmtShort = (n: number) => {
 };
 
 /* ------------------------------------------------------------------ */
-/*  Slider control: label · editable value · gold-filled range         */
+/*  Number field: label · manual input · stepper buttons · range hint  */
 /* ------------------------------------------------------------------ */
 
-interface SliderProps {
+interface FieldProps {
   label: string;
   value: number;
   min: number;
   max: number;
   step: number;
   onChange: (v: number) => void;
-  display: string;
-  minLabel: string;
-  maxLabel: string;
-  inputSuffix?: string;
+  prefix?: string;
+  suffix?: string;
+  hint: string;
+  decimals?: number;
 }
 
-function SliderControl({
+const clamp = (v: number, min: number, max: number) => Math.min(Math.max(v, min), max);
+
+function NumberField({
   label,
   value,
   min,
   max,
   step,
   onChange,
-  display,
-  minLabel,
-  maxLabel,
-  inputSuffix,
-}: SliderProps) {
+  prefix,
+  suffix,
+  hint,
+  decimals = 0,
+}: FieldProps) {
   const id = useId();
-  const pct = ((value - min) / (max - min)) * 100;
+  // Local text state lets the user clear and retype freely; we clamp on blur.
+  const [text, setText] = useState<string | null>(null);
+  const shown = text ?? value.toLocaleString("en-IN", { maximumFractionDigits: decimals });
+
+  const commit = (raw: string) => {
+    const n = Number(raw.replace(/,/g, ""));
+    if (raw.trim() === "" || Number.isNaN(n)) {
+      onChange(value); // revert to last valid
+    } else {
+      const rounded = decimals > 0 ? Math.round(n / step) * step : Math.round(n);
+      onChange(clamp(Number(rounded.toFixed(decimals)), min, max));
+    }
+    setText(null);
+  };
+
+  const nudge = (dir: 1 | -1) => onChange(clamp(Number((value + dir * step).toFixed(decimals)), min, max));
 
   return (
     <div>
-      <div className="flex items-end justify-between gap-4">
-        <label htmlFor={id} className="text-xs font-semibold uppercase tracking-[0.16em] text-navy-700">
-          {label}
-        </label>
-        <div className="flex items-baseline gap-1.5">
-          <output htmlFor={id} className="font-serif-display text-2xl text-navy-800">
-            {display}
-          </output>
-          {inputSuffix && <span className="text-sm font-medium text-ink-soft">{inputSuffix}</span>}
+      <label htmlFor={id} className="text-xs font-semibold uppercase tracking-[0.16em] text-navy-700">
+        {label}
+      </label>
+      <div className="mt-3 flex items-stretch overflow-hidden rounded-xl border border-navy-100 bg-white transition-colors duration-300 focus-within:border-gold-400 focus-within:ring-2 focus-within:ring-gold-400/40">
+        <button
+          type="button"
+          onClick={() => nudge(-1)}
+          disabled={value <= min}
+          aria-label={`Decrease ${label}`}
+          className="flex w-12 shrink-0 items-center justify-center border-r border-navy-100 text-navy-700 transition-colors duration-200 hover:bg-navy-50 disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          <svg viewBox="0 0 16 16" className="h-4 w-4" fill="none" aria-hidden="true">
+            <path d="M3 8h10" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          </svg>
+        </button>
+
+        <div className="flex flex-1 items-center gap-1 px-3">
+          {prefix && <span className="font-serif-display text-xl text-ink-soft">{prefix}</span>}
+          <input
+            id={id}
+            type="text"
+            inputMode="decimal"
+            value={shown}
+            onChange={(e) => setText(e.target.value)}
+            onFocus={(e) => {
+              setText(String(value));
+              requestAnimationFrame(() => e.target.select());
+            }}
+            onBlur={(e) => commit(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") (e.target as HTMLInputElement).blur();
+              if (e.key === "ArrowUp") { e.preventDefault(); nudge(1); }
+              if (e.key === "ArrowDown") { e.preventDefault(); nudge(-1); }
+            }}
+            aria-label={label}
+            className="w-full min-w-0 bg-transparent py-3.5 font-serif-display text-xl text-navy-800 focus:outline-none"
+          />
+          {suffix && <span className="whitespace-nowrap text-sm font-medium text-ink-soft">{suffix}</span>}
         </div>
+
+        <button
+          type="button"
+          onClick={() => nudge(1)}
+          disabled={value >= max}
+          aria-label={`Increase ${label}`}
+          className="flex w-12 shrink-0 items-center justify-center border-l border-navy-100 text-navy-700 transition-colors duration-200 hover:bg-navy-50 disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          <svg viewBox="0 0 16 16" className="h-4 w-4" fill="none" aria-hidden="true">
+            <path d="M8 3v10M3 8h10" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+          </svg>
+        </button>
       </div>
-      <input
-        id={id}
-        type="range"
-        className="cw-range mt-4"
-        min={min}
-        max={max}
-        step={step}
-        value={value}
-        onChange={(e) => onChange(Number(e.target.value))}
-        aria-label={label}
-        style={{
-          background: `linear-gradient(to right, #C79A2D 0%, #C79A2D ${pct}%, #E2E9F6 ${pct}%, #E2E9F6 100%)`,
-        }}
-      />
-      <div className="mt-2 flex justify-between text-[0.7rem] font-medium text-ink-soft/70">
-        <span>{minLabel}</span>
-        <span>{maxLabel}</span>
-      </div>
+      <p className="mt-2 text-[0.7rem] font-medium text-ink-soft/70">{hint}</p>
     </div>
   );
 }
@@ -192,40 +233,36 @@ export default function EmiCalculator({
       <div className="grid lg:grid-cols-[1.15fr_1fr]">
         {/* ---- Controls ---- */}
         <div className="space-y-10 p-8 sm:p-11">
-          <SliderControl
+          <NumberField
             label="Loan Amount"
             value={amount}
             min={100000}
             max={50000000}
             step={100000}
             onChange={setAmount}
-            display={fmtShort(amount)}
-            minLabel="₹1 L"
-            maxLabel="₹5 Cr"
+            prefix="₹"
+            hint={`${fmtShort(amount)} · enter ₹1 L to ₹5 Cr`}
           />
-          <SliderControl
+          <NumberField
             label="Interest Rate"
             value={rate}
             min={6}
             max={20}
             step={0.1}
+            decimals={1}
             onChange={setRate}
-            display={rate.toFixed(1)}
-            inputSuffix="% p.a."
-            minLabel="6%"
-            maxLabel="20%"
+            suffix="% p.a."
+            hint="Enter 6% to 20% per annum"
           />
-          <SliderControl
+          <NumberField
             label="Loan Tenure"
             value={years}
             min={1}
             max={30}
             step={1}
             onChange={setYears}
-            display={String(years)}
-            inputSuffix={years === 1 ? "year" : "years"}
-            minLabel="1 yr"
-            maxLabel="30 yrs"
+            suffix={years === 1 ? "year" : "years"}
+            hint="Enter 1 to 30 years"
           />
           <p className="!mt-8 text-xs leading-relaxed text-ink-soft/80">
             Indicative calculation on reducing balance. Your exact rate depends on your

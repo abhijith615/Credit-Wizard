@@ -20,6 +20,7 @@ const mainLinks = [
 ];
 
 const tailLinks = [
+  { href: "/#emi-calculator", label: "EMI Calculator" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
@@ -196,6 +197,7 @@ export default function Navbar() {
               <Link
                 key={l.href}
                 href={l.href}
+                onClick={() => setOpen(false)}
                 className={`border-b border-navy-100/70 py-4 font-serif-display text-2xl text-navy-800 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                   open ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
                 }`}

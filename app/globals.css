@@ -210,53 +210,6 @@ body {
   will-change: transform, opacity;
 }
 
-/* ---------- EMI calculator sliders ---------- */
-
-.cw-range {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 6px;
-  border-radius: 9999px;
-  outline-offset: 6px;
-  cursor: pointer;
-  /* Track fill is painted inline per-value from the component */
-}
-
-.cw-range::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  height: 24px;
-  width: 24px;
-  border-radius: 9999px;
-  background: #ffffff;
-  border: 3px solid var(--color-gold-500);
-  box-shadow: 0 2px 10px rgba(22, 36, 74, 0.25);
-  transition: transform 0.25s var(--ease-out-expo), box-shadow 0.25s ease;
-}
-
-.cw-range::-moz-range-thumb {
-  height: 24px;
-  width: 24px;
-  border-radius: 9999px;
-  background: #ffffff;
-  border: 3px solid var(--color-gold-500);
-  box-shadow: 0 2px 10px rgba(22, 36, 74, 0.25);
-  transition: transform 0.25s var(--ease-out-expo), box-shadow 0.25s ease;
-}
-
-.cw-range:hover::-webkit-slider-thumb,
-.cw-range:focus-visible::-webkit-slider-thumb {
-  transform: scale(1.15);
-  box-shadow: 0 4px 16px rgba(199, 154, 45, 0.45);
-}
-
-.cw-range:hover::-moz-range-thumb,
-.cw-range:focus-visible::-moz-range-thumb {
-  transform: scale(1.15);
-  box-shadow: 0 4px 16px rgba(199, 154, 45, 0.45);
-}
-
 /* ---------- Custom cursor ---------- */
 
 @media (pointer: fine) {

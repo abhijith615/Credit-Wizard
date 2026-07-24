@@ -299,7 +299,7 @@ export default function Hero() {
             <MagneticButton href="/contact#enquiry" variant="gold">
               Get Started
             </MagneticButton>
-            <MagneticButton href="/business-loan" variant="ghost-light">
+            <MagneticButton href="/business-loan" variant="gold">
               Explore Loan Solutions
             </MagneticButton>
           </div>

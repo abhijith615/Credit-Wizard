@@ -8,7 +8,7 @@ export default function EmiSection() {
   const scope = useReveal<HTMLElement>();
 
   return (
-    <section ref={scope} className="bg-white py-28 lg:py-36" aria-label="EMI calculator">
+    <section ref={scope} id="emi-calculator" className="scroll-mt-24 bg-white py-28 lg:py-36" aria-label="EMI calculator">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Plan Before You Borrow"
