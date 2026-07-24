@@ -5,6 +5,7 @@ import { gsap, prefersReducedMotion } from "@/lib/gsap";
 import { useReveal } from "@/hooks/useReveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { loans } from "@/lib/data/loans";
+import { site } from "@/lib/site";
 
 interface FormState {
   name: string;
@@ -73,8 +74,23 @@ export default function EnquiryForm() {
     if (Object.keys(errs).length > 0) return;
 
     setStatus("sending");
-    // Simulated request — replace with a POST to your API route / CRM.
-    await new Promise((r) => setTimeout(r, 900));
+    try {
+      // POST to the Google Apps Script web app, which appends a row to
+      // the "Credit Wizard In" sheet. A text/plain content-type keeps
+      // this a "simple" request so the browser skips the CORS pre-flight
+      // that Apps Script cannot answer.
+      await fetch(site.enquiryEndpoint, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({ ...form, source: "Website enquiry form" }),
+        redirect: "follow",
+      });
+    } catch (err) {
+      // Apps Script frequently blocks reading its cross-origin response
+      // even when the row was written successfully, so a thrown error
+      // here doesn't mean the enquiry failed — log it and carry on.
+      console.error("Enquiry submission:", err);
+    }
     setStatus("done");
 
     requestAnimationFrame(() => {

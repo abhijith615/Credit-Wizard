@@ -9,6 +9,12 @@ export const site = {
   phoneHref: "tel:+917904283184",
   whatsapp: "https://wa.me/917904283184",
   email: "support@creditwizardin.com",
+  // Google Apps Script web-app endpoint that logs enquiries to the
+  // "Credit Wizard In" sheet. Override per-environment with
+  // NEXT_PUBLIC_ENQUIRY_ENDPOINT if you redeploy the script.
+  enquiryEndpoint:
+    process.env.NEXT_PUBLIC_ENQUIRY_ENDPOINT ||
+    "https://script.google.com/macros/s/AKfycbztGv39QF9yyLM6WQwNSzEp7Djgu09lLENKfXhyb7zQ91w4aYkwzPuaRKEN8s0B1-iz/exec",
   address: {
     street: "No. 15, Alagendra Towers, 3rd Floor, IDFC Bank Upstairs, Bungalow Stop",
     locality: "Tiruppur",
