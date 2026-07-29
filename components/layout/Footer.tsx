@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 import Logo from "@/components/ui/Logo";
 import { site } from "@/lib/site";
 
@@ -22,9 +21,6 @@ const loanLinks = [
 ];
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
-
   return (
     <footer className="relative overflow-hidden bg-navy-900 text-white">
       {/* Ambient gold glow */}
@@ -84,46 +80,8 @@ export default function Footer() {
           </nav>
 
           <div>
-            <h3 className="eyebrow mb-6 !text-gold-400">Stay Informed</h3>
-            {subscribed ? (
-              <p className="text-sm leading-relaxed text-gold-300">
-                Thank you — you&apos;re on the list. Smart finance insights, once a month.
-              </p>
-            ) : (
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  if (email.includes("@")) setSubscribed(true);
-                }}
-              >
-                <p className="mb-4 text-sm leading-relaxed text-navy-200">
-                  Monthly insights on loans, rates and credit health. No spam, ever.
-                </p>
-                <div className="flex overflow-hidden rounded-full border border-white/15 bg-white/5 focus-within:border-gold-400">
-                  <label htmlFor="footer-email" className="sr-only">
-                    Email address
-                  </label>
-                  <input
-                    id="footer-email"
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Your email"
-                    className="w-full bg-transparent px-5 py-3 text-sm text-white placeholder:text-navy-300 focus:outline-none"
-                  />
-                  <button
-                    type="submit"
-                    className="shrink-0 bg-gold-500 px-5 text-sm font-semibold text-navy-900 transition-colors hover:bg-gold-400"
-                    aria-label="Subscribe to newsletter"
-                  >
-                    Join
-                  </button>
-                </div>
-              </form>
-            )}
-
-            <div className="mt-8 space-y-2 text-sm text-navy-200">
+            <h3 className="eyebrow mb-6 !text-gold-400">Get in Touch</h3>
+            <div className="space-y-2 text-sm text-navy-200">
               <p>
                 <a href={site.phoneHref} className="transition-colors hover:text-gold-300">
                   {site.phone}
