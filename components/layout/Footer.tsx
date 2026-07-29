@@ -142,33 +142,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-8 sm:flex-row">
+        <div className="mt-14 border-t border-white/10 pt-8 text-center sm:text-left">
           <p className="text-xs text-navy-300">
             © {new Date().getFullYear()} {site.name}. All rights reserved. · Tiruppur, Tamil Nadu
           </p>
-          <div className="flex gap-5">
-            {(
-              [
-                ["Facebook", site.social.facebook, "M13.5 8.5V6.75c0-.7.55-1.25 1.25-1.25H16.5V2.5h-2.75A4.25 4.25 0 0 0 9.5 6.75V8.5H7v3h2.5v9h4v-9h2.75l.5-3z"],
-                ["Instagram", site.social.instagram, "M12 8.25A3.75 3.75 0 1 0 12 15.75 3.75 3.75 0 0 0 12 8.25zM12 6a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm6.4-.65a1.35 1.35 0 1 1-2.7 0 1.35 1.35 0 0 1 2.7 0zM3 7.5A4.5 4.5 0 0 1 7.5 3h9A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5z"],
-                ["LinkedIn", site.social.linkedin, "M6.5 8.75v11.5H3V8.75zM4.75 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM20.5 13.6v6.65H17v-6.15c0-1.5-.65-2.35-1.9-2.35-1 0-1.7.7-1.95 1.35-.1.25-.15.55-.15.9v6.25H9.5V8.75H13v1.5c.55-.85 1.55-1.85 3.5-1.85 2.45 0 4 1.65 4 5.2z"],
-                ["X", site.social.twitter, "M17.75 3h3.1l-6.8 7.8L22 21h-6.25l-4.9-6.45L5.25 21h-3.1l7.25-8.35L2 3h6.4l4.45 5.9zm-1.1 16.15h1.7L7.45 4.75H5.6z"],
-              ] as const
-            ).map(([name, href, d]) => (
-              <a
-                key={name}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${site.name} on ${name}`}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/12 text-navy-200 transition-all duration-300 hover:border-gold-400 hover:text-gold-300"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden="true">
-                  <path d={d} />
-                </svg>
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </footer>
